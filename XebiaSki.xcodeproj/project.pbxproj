@@ -24,7 +24,6 @@
 		42790CB21A12463A00A837EE /* XebiaSkiFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42790C9A1A12463A00A837EE /* XebiaSkiFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42790CBC1A12465E00A837EE /* XebiaSkiFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42790C9A1A12463A00A837EE /* XebiaSkiFramework.framework */; };
 		42790CBF1A1246C700A837EE /* PhotoDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42790CBD1A1246C700A837EE /* PhotoDownloadManager.swift */; };
-		42790CC01A1246C700A837EE /* PhotoPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42790CBE1A1246C700A837EE /* PhotoPersistenceManager.swift */; };
 		42C7D9C11A1C2A6000EFA517 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C7D9C01A1C2A6000EFA517 /* WatchKit.framework */; };
 		42C7D9C71A1C2A6000EFA517 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7D9C61A1C2A6000EFA517 /* InterfaceController.swift */; };
 		42C7D9C91A1C2A6000EFA517 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7D9C81A1C2A6000EFA517 /* NotificationController.swift */; };
@@ -137,9 +136,6 @@
 		42790CAC1A12463A00A837EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42790CAD1A12463A00A837EE /* XebiaSkiFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XebiaSkiFrameworkTests.swift; sourceTree = "<group>"; };
 		42790CBD1A1246C700A837EE /* PhotoDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDownloadManager.swift; sourceTree = "<group>"; };
-		42790CBE1A1246C700A837EE /* PhotoPersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPersistenceManager.swift; sourceTree = "<group>"; };
-		42790CC11A12507F00A837EE /* XebiaSki.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = XebiaSki.entitlements; sourceTree = "<group>"; };
-		42790CC21A1253F200A837EE /* TodayPreviewExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TodayPreviewExtension.entitlements; sourceTree = "<group>"; };
 		42C7D9BF1A1C2A6000EFA517 /* XebiaSki WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "XebiaSki WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C7D9C01A1C2A6000EFA517 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		42C7D9C41A1C2A6000EFA517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,7 +148,6 @@
 		42C7D9D61A1C2A6000EFA517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C7D9D71A1C2A6000EFA517 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		42C7D9D91A1C2A6000EFA517 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		42C7D9E41A1C2FF500EFA517 /* XebiaSki WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "XebiaSki WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,7 +233,6 @@
 		42790C581A120ED900A837EE /* XebiaSki */ = {
 			isa = PBXGroup;
 			children = (
-				42790CC11A12507F00A837EE /* XebiaSki.entitlements */,
 				42790C5B1A120ED900A837EE /* AppDelegate.swift */,
 				42790C5D1A120ED900A837EE /* ViewController.swift */,
 				42790C5F1A120ED900A837EE /* Main.storyboard */,
@@ -286,7 +280,6 @@
 		42790C871A1243F300A837EE /* TodayPreviewExtension */ = {
 			isa = PBXGroup;
 			children = (
-				42790CC21A1253F200A837EE /* TodayPreviewExtension.entitlements */,
 				42790C8A1A1243F300A837EE /* TodayViewController.swift */,
 				42790C8C1A1243F300A837EE /* MainInterface.storyboard */,
 				42790C881A1243F300A837EE /* Supporting Files */,
@@ -306,7 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				42790CBD1A1246C700A837EE /* PhotoDownloadManager.swift */,
-				42790CBE1A1246C700A837EE /* PhotoPersistenceManager.swift */,
 				42790C9E1A12463A00A837EE /* XebiaSkiFramework.h */,
 				42790C9C1A12463A00A837EE /* Supporting Files */,
 			);
@@ -341,7 +333,6 @@
 		42C7D9C21A1C2A6000EFA517 /* XebiaSki WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				42C7D9E41A1C2FF500EFA517 /* XebiaSki WatchKit Extension.entitlements */,
 				42C7D9C61A1C2A6000EFA517 /* InterfaceController.swift */,
 				42C7D9C81A1C2A6000EFA517 /* NotificationController.swift */,
 				42C7D9CA1A1C2A6000EFA517 /* GlanceController.swift */,
@@ -533,7 +524,7 @@
 						DevelopmentTeam = 8H9F4GW3CK;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -688,7 +679,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42790CC01A1246C700A837EE /* PhotoPersistenceManager.swift in Sources */,
 				42790CBF1A1246C700A837EE /* PhotoDownloadManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -854,7 +844,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = XebiaSki/XebiaSki.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -869,7 +858,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = XebiaSki/XebiaSki.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -917,7 +905,6 @@
 		42790C921A1243F300A837EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = TodayPreviewExtension/TodayPreviewExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -935,7 +922,6 @@
 		42790C931A1243F300A837EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = TodayPreviewExtension/TodayPreviewExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TodayPreviewExtension/Info.plist;
@@ -1023,7 +1009,6 @@
 		42C7D9DE1A1C2A6100EFA517 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "XebiaSki WatchKit Extension/XebiaSki WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1042,7 +1027,6 @@
 		42C7D9DF1A1C2A6100EFA517 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "XebiaSki WatchKit Extension/XebiaSki WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "XebiaSki WatchKit Extension/Info.plist";
@@ -1152,6 +1136,7 @@
 				42C7D9E11A1C2A6100EFA517 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42C7D9E31A1C2A6100EFA517 /* Build configuration list for PBXNativeTarget "XebiaSki WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -1160,6 +1145,7 @@
 				42C7D9DF1A1C2A6100EFA517 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

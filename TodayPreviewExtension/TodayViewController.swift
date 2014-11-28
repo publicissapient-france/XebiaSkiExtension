@@ -11,7 +11,7 @@ import XebiaSkiFramework
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
-    let photoPersistenceManager = PhotoPersistenceManager()
+    private let photoDownloadManager = PhotoDownloadManager(photoURL: NSURL(string: "http://www.trinum.com/ibox/ftpcam/mega_les-arcs_arcabulle.jpg")!)
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageViewHeight: NSLayoutConstraint!
     
@@ -25,7 +25,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     func reloadPhoto() {
-        self.photoPersistenceManager.retrievePhoto {[weak self] (image) -> () in
+        self.photoDownloadManager.retrievePhoto {[weak self] (image) -> () in
             if let image = image? {
                 self?.imageView.image = image
                 let imageViewFrame:CGRect = self == nil ? CGRectZero : self!.imageView.frame

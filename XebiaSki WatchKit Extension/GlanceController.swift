@@ -14,7 +14,7 @@ class GlanceController: WKInterfaceController {
 
     @IBOutlet weak var photoImage: WKInterfaceImage!
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
-    private let photoPersistenceManager = PhotoPersistenceManager()
+    private let photoDownloadManager = PhotoDownloadManager(photoURL: NSURL(string: "http://www.trinum.com/ibox/ftpcam/mega_les-arcs_arcabulle.jpg")!)
     
     override init(context: AnyObject?) {
         super.init(context: context)
@@ -25,9 +25,7 @@ class GlanceController: WKInterfaceController {
         super.willActivate()
         
         self.titleLabel.setText("Les Arcs")
-        
-        self.photoPersistenceManager.photoDownloadManager = PhotoDownloadManager(photoURL: NSURL(string: "http://www.trinum.com/ibox/ftpcam/mega_les-arcs_arcabulle.jpg")!)
-        self.photoPersistenceManager.retrievePhoto { [weak self] (image) -> () in
+        self.photoDownloadManager.retrievePhoto { [weak self] (image) -> () in
             if let weakSelf = self? {
                 weakSelf.photoImage.setImage(image)
             }

@@ -21,9 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-        let photoPersistenceManager = PhotoPersistenceManager()
-        photoPersistenceManager.photoDownloadManager = PhotoDownloadManager(photoURL: NSURL(string: "http://www.trinum.com/ibox/ftpcam/mega_les-arcs_arcabulle.jpg")!)
-        photoPersistenceManager.retrievePhoto { (image) -> () in
+        let photoDownloadManager = PhotoDownloadManager(photoURL: NSURL(string: "http://www.trinum.com/ibox/ftpcam/mega_les-arcs_arcabulle.jpg")!)
+        photoDownloadManager.retrievePhoto { (image) -> () in
             completionHandler(.NewData)
         }
     }
