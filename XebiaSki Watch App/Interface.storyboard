@@ -5,17 +5,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Weather-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="XebiaSki_Watch_App" customModuleProvider="target">
+                <controller title="Weather" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="XebiaSki_Watch_App" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="left" verticalAlignment="bottom" hasDetent="YES" id="raG-dy-YTB">
+                        <group width="1" height="1" alignment="left" verticalAlignment="bottom" radius="0.0" hasDetent="YES" id="raG-dy-YTB">
                             <items>
-                                <label alignment="left" text="16°C" id="Xjt-LL-O6r">
+                                <label alignment="left" verticalAlignment="bottom" text="16°C" id="Xjt-LL-O6r">
                                     <fontDescription key="font" type="boldSystem" pointSize="33"/>
                                 </label>
-                                <group alignment="right" layout="vertical" spacing="0.0" id="SwX-7p-O47">
+                                <group alignment="right" verticalAlignment="bottom" layout="vertical" spacing="0.0" id="SwX-7p-O47">
                                     <items>
                                         <label alignment="center" text="New-York" id="PK4-W7-2Yj"/>
                                         <label alignment="center" verticalAlignment="bottom" text="Lundi 13" id="m3j-vB-mUG">
@@ -26,6 +26,12 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="group" destination="raG-dy-YTB" id="MgM-0p-2Di"/>
+                        <outlet property="labelDay" destination="m3j-vB-mUG" id="3QJ-c3-ruD"/>
+                        <outlet property="labelResortName" destination="PK4-W7-2Yj" id="dEr-hD-uXR"/>
+                        <outlet property="labelTemperature" destination="Xjt-LL-O6r" id="BaE-qF-zsc"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
