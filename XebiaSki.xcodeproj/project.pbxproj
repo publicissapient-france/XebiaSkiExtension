@@ -33,6 +33,7 @@
 		42C7D9D81A1C2A6000EFA517 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C7D9D71A1C2A6000EFA517 /* Interface.storyboard */; };
 		42C7D9DA1A1C2A6000EFA517 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C7D9D91A1C2A6000EFA517 /* Images.xcassets */; };
 		42C7D9DD1A1C2A6000EFA517 /* XebiaSki WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42C7D9BF1A1C2A6000EFA517 /* XebiaSki WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4908FE361A2B558800770140 /* SkiResort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FE351A2B558800770140 /* SkiResort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,7 @@
 		42C7D9D61A1C2A6000EFA517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C7D9D71A1C2A6000EFA517 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		42C7D9D91A1C2A6000EFA517 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4908FE351A2B558800770140 /* SkiResort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkiResort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				42790CBD1A1246C700A837EE /* PhotoDownloadManager.swift */,
+				4908FE351A2B558800770140 /* SkiResort.swift */,
 				42790C9E1A12463A00A837EE /* XebiaSkiFramework.h */,
 				42790C9C1A12463A00A837EE /* Supporting Files */,
 			);
@@ -679,6 +682,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4908FE361A2B558800770140 /* SkiResort.swift in Sources */,
 				42790CBF1A1246C700A837EE /* PhotoDownloadManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
