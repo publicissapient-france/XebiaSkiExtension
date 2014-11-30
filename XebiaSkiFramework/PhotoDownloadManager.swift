@@ -41,11 +41,7 @@ public class PhotoDownloadManager {
     // MARK: Entry point
     
     public func retrievePhoto(callback: RetrieveCallback) {
-        if shouldDownloadPhoto() {
-            retrievePhotoFromRemote(callback)
-        } else {
-            retrievePhotoFromLocal(callback)
-        }
+        retrievePhotoFromRemote(callback)
     }
     
     // MARK: Cache

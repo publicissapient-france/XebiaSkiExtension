@@ -15,8 +15,8 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var labelDay: WKInterfaceLabel!
     @IBOutlet weak var labelResortName: WKInterfaceLabel!
     @IBOutlet weak var group: WKInterfaceGroup!
-//    private let photoDownloadManager = PhotoDownloadManager(photoURL: NSURL(string: "http://www.trinum.com/ibox/ftpcam/mega_les-arcs_arcabulle.jpg")!)
 
+    private let photoDownloadManager = PhotoDownloadManager(photoURL: NSURL(string: "http://www.snow-forecast.com/system/images/5097/large/Les-Arcs.jpg")!)
 
     override init(context: AnyObject?) {
         // Initialize variables here.
@@ -29,16 +29,21 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
 
-        let img = UIImage(named: "les_arcs")
-        let filter = CIFilter(name:"CIGaussianBlur")
+        photoDownloadManager.retrievePhoto { (image) -> () in
+            if let img = image {
+                let filter = CIFilter(name:"CIGaussianBlur")
 
-        filter.setValue(CIImage(image: img), forKey: kCIInputImageKey)
+                filter.setValue(3, forKey: kCIInputRadiusKey)
+                filter.setValue(CIImage(image: img), forKey: kCIInputImageKey)
 
-        let outputImg = filter.outputImage
-        var context = CIContext(options:nil)
-        let cgimg = context.createCGImage(outputImg, fromRect: CGRectMake(0, 0, 800, 600))
+                let outputImg = filter.outputImage
+                var context = CIContext(options:nil)
+                var frame = outputImg.extent()
+                let cgimg = context.createCGImage(outputImg, fromRect: CGRectMake(0, 0,800, 400))
 
-        self.group.setBackgroundImage(UIImage(CGImage: cgimg))
+                self.group.setBackgroundImage(UIImage(CGImage: cgimg))
+            }
+        }
     }
 
     override func didDeactivate() {
