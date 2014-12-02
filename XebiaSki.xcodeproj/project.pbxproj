@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		423058681A28C4B600DFB729 /* CameraTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423058671A28C4B600DFB729 /* CameraTableRowController.swift */; };
+		4230586B1A2DC10E00DFB729 /* Webcam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4230586A1A2DC10E00DFB729 /* Webcam.swift */; };
+		4230586E1A2DC1B100DFB729 /* WebcamDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4230586D1A2DC1B100DFB729 /* WebcamDataSource.swift */; };
+		4230586F1A2DC3F500DFB729 /* XebiaSkiFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42790C9A1A12463A00A837EE /* XebiaSkiFramework.framework */; };
+		423058711A2DCECC00DFB729 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423058701A2DCECC00DFB729 /* DetailInterfaceController.swift */; };
 		42790C5C1A120ED900A837EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42790C5B1A120ED900A837EE /* AppDelegate.swift */; };
 		42790C5E1A120ED900A837EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42790C5D1A120ED900A837EE /* ViewController.swift */; };
 		42790C611A120ED900A837EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42790C5F1A120ED900A837EE /* Main.storyboard */; };
@@ -114,6 +119,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		423058671A28C4B600DFB729 /* CameraTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTableRowController.swift; sourceTree = "<group>"; };
+		4230586A1A2DC10E00DFB729 /* Webcam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webcam.swift; sourceTree = "<group>"; };
+		4230586D1A2DC1B100DFB729 /* WebcamDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebcamDataSource.swift; sourceTree = "<group>"; };
+		423058701A2DCECC00DFB729 /* DetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
 		42790C561A120ED900A837EE /* XebiaSki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XebiaSki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42790C5A1A120ED900A837EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42790C5B1A120ED900A837EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4230586F1A2DC3F500DFB729 /* XebiaSkiFramework.framework in Frameworks */,
 				42C7D9C11A1C2A6000EFA517 /* WatchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +211,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		423058661A28C4B600DFB729 /* TableRowControllers */ = {
+			isa = PBXGroup;
+			children = (
+				423058671A28C4B600DFB729 /* CameraTableRowController.swift */,
+			);
+			path = TableRowControllers;
+			sourceTree = "<group>";
+		};
+		423058691A2DC03E00DFB729 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4230586A1A2DC10E00DFB729 /* Webcam.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4230586C1A2DC19D00DFB729 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				4230586D1A2DC1B100DFB729 /* WebcamDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
 		42790C4D1A120ED800A837EE = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +332,8 @@
 		42790C9B1A12463A00A837EE /* XebiaSkiFramework */ = {
 			isa = PBXGroup;
 			children = (
+				4230586C1A2DC19D00DFB729 /* DataSources */,
+				423058691A2DC03E00DFB729 /* Models */,
 				42790CBD1A1246C700A837EE /* PhotoDownloadManager.swift */,
 				42790C9E1A12463A00A837EE /* XebiaSkiFramework.h */,
 				42790C9C1A12463A00A837EE /* Supporting Files */,
@@ -333,7 +369,9 @@
 		42C7D9C21A1C2A6000EFA517 /* XebiaSki WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				423058661A28C4B600DFB729 /* TableRowControllers */,
 				42C7D9C61A1C2A6000EFA517 /* InterfaceController.swift */,
+				423058701A2DCECC00DFB729 /* DetailInterfaceController.swift */,
 				42C7D9C81A1C2A6000EFA517 /* NotificationController.swift */,
 				42C7D9CA1A1C2A6000EFA517 /* GlanceController.swift */,
 				42C7D9CC1A1C2A6000EFA517 /* Images.xcassets */,
@@ -679,6 +717,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4230586B1A2DC10E00DFB729 /* Webcam.swift in Sources */,
+				4230586E1A2DC1B100DFB729 /* WebcamDataSource.swift in Sources */,
 				42790CBF1A1246C700A837EE /* PhotoDownloadManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,7 +737,9 @@
 			files = (
 				42C7D9C91A1C2A6000EFA517 /* NotificationController.swift in Sources */,
 				42C7D9C71A1C2A6000EFA517 /* InterfaceController.swift in Sources */,
+				423058681A28C4B600DFB729 /* CameraTableRowController.swift in Sources */,
 				42C7D9CB1A1C2A6000EFA517 /* GlanceController.swift in Sources */,
+				423058711A2DCECC00DFB729 /* DetailInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

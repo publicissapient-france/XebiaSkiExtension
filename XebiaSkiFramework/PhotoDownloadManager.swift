@@ -26,49 +26,20 @@ public class PhotoDownloadManager {
         self.photoURL = photoURL
     }
     
-    private var localPhotoURL: NSURL? {
-        get {
-            let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-            if let documentsDirectory: NSString = paths[0] as? NSString {
-                let encodedRemoteURL = CFURLCreateStringByAddingPercentEscapes(nil, self.photoURL.absoluteString!, nil, "!*'\"();:@&=+$,/?%#[]% ", CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
-                let photoURL = NSURL.fileURLWithPath(documentsDirectory.stringByAppendingPathComponent(encodedRemoteURL))
-                return photoURL
-            }
-            return nil
-        }
-    }
-    
     // MARK: Entry point
     
     public func retrievePhoto(callback: RetrieveCallback) {
-        if shouldDownloadPhoto() {
-            retrievePhotoFromRemote(callback)
-        } else {
-            retrievePhotoFromLocal(callback)
-        }
-    }
-    
-    // MARK: Cache
-    
-    private func shouldDownloadPhoto() -> Bool {
-        if let lastSaved = self.lastSaved() {
-            let futureDate = NSDate().dateByAddingTimeInterval(self.refreshInterval)
-            return lastSaved.compare(futureDate) == NSComparisonResult.OrderedDescending
-        }
-        return true
-    }
-    
-    private func registerTimeStamp() {
-        self.userDefaults?.setObject(NSDate(), forKey: self.lastSavedKey)
-        self.userDefaults?.synchronize()
-    }
-    
-    private func retrievePhotoFromLocal(callback: RetrieveCallback) {
-        if let photoFileURL = self.localPhotoURL? {
-            retrievePhotoFromLocalURL(photoFileURL, callback: callback)
-            return
-        }
-        callback(nil)
+        downloadPhoto(self.photoURL, result: {[weak self] (URL) -> () in
+            if self == nil {
+                callback(nil)
+                return;
+            }
+            if let tempURL = URL? {
+                self?.retrievePhotoFromLocalURL(tempURL, callback: callback)
+                return;
+            }
+            callback(nil)
+        })
     }
     
     private func retrievePhotoFromLocalURL(URL: NSURL, callback: RetrieveCallback) {
@@ -80,39 +51,6 @@ public class PhotoDownloadManager {
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             callback(photo)
         })
-    }
-    
-    private func savePhoto(URL: NSURL) {
-        let fileManager = NSFileManager.defaultManager()
-        if let photoFileURL = self.localPhotoURL? {
-            fileManager.copyItemAtURL(URL, toURL: photoFileURL, error: nil)
-        }
-    }
-    
-    public func lastSaved() -> NSDate? {
-        return self.userDefaults?.objectForKey(self.lastSavedKey)? as? NSDate
-    }
-    
-    // MARK: Download
-    
-    private func retrievePhotoFromRemote(callback: RetrieveCallback) {
-        downloadLatestPhoto({[weak self] (URL) -> () in
-            if self == nil {
-                callback(nil)
-                return;
-            }
-            if let URLToSave = URL? {
-                self?.savePhoto(URLToSave)
-                self?.registerTimeStamp()
-                self?.retrievePhotoFromLocal(callback)
-                return;
-            }
-            callback(nil)
-        })
-    }
-    
-    public func downloadLatestPhoto(result: DownloadCallback) {
-        downloadPhoto(self.photoURL, result: result)
     }
     
     private func downloadPhoto(URL: NSURL, result: DownloadCallback) {

@@ -8,9 +8,58 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="XebiaSki_Watch_App" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="XebiaSki_Watch_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" layout="vertical" id="mTr-za-VCB">
+                            <items>
+                                <tableRow identifier="CameraTableRow" id="T6W-aX-MIg" customClass="CameraTableRowController" customModule="XebiaSki_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="44" alignment="left" id="khI-OW-wJ5">
+                                        <items>
+                                            <label height="1" alignment="left" text="Label" id="2R9-59-cQ3"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="2R9-59-cQ3" id="zEx-Ij-gDL"/>
+                                        <segue destination="8LL-ut-pvL" kind="push" identifier="ShowDetail" id="dC0-d6-ThA"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="mainTable" destination="mTr-za-VCB" id="FPd-gU-Vqn"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--DetailController-->
+        <scene sceneID="Uxu-M5-ddI">
+            <objects>
+                <controller identifier="DetailController" id="8LL-ut-pvL" customClass="DetailInterfaceController" customModule="XebiaSki_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" hasDetent="YES" id="wZk-M3-EVW">
+                            <items>
+                                <group width="1" height="0.20000000000000001" alignment="left" id="2RH-9h-qLR">
+                                    <items>
+                                        <label height="1" alignment="left" text="Label" id="X1x-FQ-K0S"/>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.80000000000000004" alignment="left" radius="6" id="LgN-gK-xzl">
+                                    <items>
+                                        <imageView width="1" height="1" alignment="left" contentMode="scaleAspectFill" id="gol-3A-zYv"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="nameLabel" destination="X1x-FQ-K0S" id="QUN-Oh-61b"/>
+                        <outlet property="photoImageView" destination="gol-3A-zYv" id="Awh-JY-Pwf"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="465" y="347"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
