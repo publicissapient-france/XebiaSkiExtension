@@ -13,6 +13,7 @@ import XebiaSkiFramework
 class GlanceController: WKInterfaceController {
 
     @IBOutlet weak var group: WKInterfaceGroup!
+    @IBOutlet weak var temperatureLabel: WKInterfaceLabel!
     @IBOutlet weak var photoImage: WKInterfaceImage!
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
     private let photoDownloadManager = PhotoDownloadManager(photoURL: NSURL(string: "http://www.trinum.com/ibox/ftpcam/mega_les-arcs_arcabulle.jpg")!)

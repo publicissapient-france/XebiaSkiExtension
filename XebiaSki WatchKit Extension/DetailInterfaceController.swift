@@ -31,5 +31,14 @@ class DetailInterfaceController: WKInterfaceController {
         self.photoDownloadManager?.retrievePhoto({ (image) -> () in
             self.photoImageView.setImage(image)
         })
+        
+        savePreference()
+    }
+    
+    func savePreference() {
+        if let skiResort = self.skiResort? {
+            NSUserDefaults.standardUserDefaults().setObject(skiResort, forKey: "Selection")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
     }
 }

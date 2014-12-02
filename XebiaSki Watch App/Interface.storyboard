@@ -8,7 +8,7 @@
         <!--Resort-->
         <scene sceneID="Lqe-ld-aol">
             <objects>
-                <controller title="Resort" id="WPz-rI-B5I">
+                <controller title="Resort" id="WPz-rI-B5I" customClass="MasterInterfaceController" customModule="XebiaSki_WatchKit_Extension">
                     <items>
                         <table alignment="left" layout="vertical" id="mTr-za-VCB">
                             <items>
@@ -28,6 +28,9 @@
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="mainTable" destination="mTr-za-VCB" id="ci1-7K-J8P"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="398"/>

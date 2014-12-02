@@ -30,7 +30,7 @@
 		42790CBC1A12465E00A837EE /* XebiaSkiFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42790C9A1A12463A00A837EE /* XebiaSkiFramework.framework */; };
 		42790CBF1A1246C700A837EE /* PhotoDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42790CBD1A1246C700A837EE /* PhotoDownloadManager.swift */; };
 		42C7D9C11A1C2A6000EFA517 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C7D9C01A1C2A6000EFA517 /* WatchKit.framework */; };
-		42C7D9C71A1C2A6000EFA517 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7D9C61A1C2A6000EFA517 /* InterfaceController.swift */; };
+		42C7D9C71A1C2A6000EFA517 /* MasterInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7D9C61A1C2A6000EFA517 /* MasterInterfaceController.swift */; };
 		42C7D9C91A1C2A6000EFA517 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7D9C81A1C2A6000EFA517 /* NotificationController.swift */; };
 		42C7D9CB1A1C2A6000EFA517 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7D9CA1A1C2A6000EFA517 /* GlanceController.swift */; };
 		42C7D9CD1A1C2A6000EFA517 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C7D9CC1A1C2A6000EFA517 /* Images.xcassets */; };
@@ -149,7 +149,7 @@
 		42C7D9C01A1C2A6000EFA517 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		42C7D9C41A1C2A6000EFA517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C7D9C51A1C2A6000EFA517 /* PushNotificationPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PushNotificationPayload.json; sourceTree = "<group>"; };
-		42C7D9C61A1C2A6000EFA517 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		42C7D9C61A1C2A6000EFA517 /* MasterInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInterfaceController.swift; sourceTree = "<group>"; };
 		42C7D9C81A1C2A6000EFA517 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		42C7D9CA1A1C2A6000EFA517 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		42C7D9CC1A1C2A6000EFA517 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -370,7 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				423058661A28C4B600DFB729 /* TableRowControllers */,
-				42C7D9C61A1C2A6000EFA517 /* InterfaceController.swift */,
+				42C7D9C61A1C2A6000EFA517 /* MasterInterfaceController.swift */,
 				423058701A2DCECC00DFB729 /* DetailInterfaceController.swift */,
 				42C7D9C81A1C2A6000EFA517 /* NotificationController.swift */,
 				42C7D9CA1A1C2A6000EFA517 /* GlanceController.swift */,
@@ -736,7 +736,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42C7D9C91A1C2A6000EFA517 /* NotificationController.swift in Sources */,
-				42C7D9C71A1C2A6000EFA517 /* InterfaceController.swift in Sources */,
+				42C7D9C71A1C2A6000EFA517 /* MasterInterfaceController.swift in Sources */,
 				423058681A28C4B600DFB729 /* CameraTableRowController.swift in Sources */,
 				42C7D9CB1A1C2A6000EFA517 /* GlanceController.swift in Sources */,
 				423058711A2DCECC00DFB729 /* DetailInterfaceController.swift in Sources */,

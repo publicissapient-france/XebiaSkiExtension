@@ -10,10 +10,7 @@ import WatchKit
 import Foundation
 import XebiaSkiFramework
 
-class InterfaceController: WKInterfaceController {
-    @IBOutlet weak var labelTemperature: WKInterfaceLabel!
-    @IBOutlet weak var labelDay: WKInterfaceLabel!
-    @IBOutlet weak var labelResortName: WKInterfaceLabel!
+class MasterInterfaceController: WKInterfaceController {
 
     private var dataSource = WebcamDataSource()
     @IBOutlet weak var mainTable: WKInterfaceTable!
@@ -22,7 +19,6 @@ class InterfaceController: WKInterfaceController {
         super.init(context: context)
         
         reloadTableData()
-        self.labelTemperature.setText(42.description + "°C")
     }
     
     func reloadTableData() {
