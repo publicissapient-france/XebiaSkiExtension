@@ -27,12 +27,13 @@ class DetailInterfaceController: WKInterfaceController {
     }
     
     override func willActivate() {
-        self.nameLabel.setText(self.skiResort?.name)
-        self.photoDownloadManager?.retrievePhoto({ (image) -> () in
-            self.photoImageView.setImage(image)
-        })
-        
-        savePreference()
+        if let skiResort = self.skiResort? {
+            self.nameLabel.setText(skiResort.name)
+            self.temperatureLabel.setText(String(skiResort.temperature) + "°C ")
+            self.photoDownloadManager?.retrievePhoto({ (image) -> () in
+                self.photoImageView.setImage(image)
+            })
+        }
     }
     
     func savePreference() {
@@ -41,5 +42,9 @@ class DetailInterfaceController: WKInterfaceController {
             NSUserDefaults.standardUserDefaults().setObject(archivedResort, forKey: "selection")
             NSUserDefaults.standardUserDefaults().synchronize()
         }
+    }
+    
+    @IBAction func setAsDefault() {
+        savePreference()
     }
 }
