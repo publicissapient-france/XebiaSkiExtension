@@ -9,14 +9,14 @@
 import UIKit
 
 public class WebcamDataSource {
-    var allObjects: Array<Webcam>
+    var allObjects: Array<SkiResort>
     
     public init() {
         self.allObjects = [
-            Webcam(name: "Arcabulle", URL: NSURL(string: "http://www.trinum.com/ibox/ftpcam/les-arcs_arcabulle.jpg")!),
-            Webcam(name: "Arcs 1600 Pistes", URL: NSURL(string: "http://static1.lesarcsnet.com/image_uploader/webcam/large/lesarcs-1600-cam.jpg")!),
-            Webcam(name: "Vanoise Express", URL: NSURL(string: "http://trinum.com/ibox/ftpcam/Peisey-Vallandry_vanoise-expresse.jpg")!),
-            Webcam(name: "Arc 1950 Village", URL: NSURL(string: "http://www.trinum.com/ibox/ftpcam/arc-1950-haut-village.jpg")!)
+            SkiResort(name: "Arcabulle", photoURL: NSURL(string: "http://www.trinum.com/ibox/ftpcam/les-arcs_arcabulle.jpg")!, temperature: 5),
+            SkiResort(name: "Arcs 1600 Pistes", photoURL: NSURL(string: "http://static1.lesarcsnet.com/image_uploader/webcam/large/lesarcs-1600-cam.jpg")!, temperature: -2),
+            SkiResort(name: "Vanoise Express", photoURL: NSURL(string: "http://trinum.com/ibox/ftpcam/Peisey-Vallandry_vanoise-expresse.jpg")!, temperature: 4),
+            SkiResort(name: "Arc 1950 Village", photoURL: NSURL(string: "http://www.trinum.com/ibox/ftpcam/arc-1950-haut-village.jpg")!, temperature: 0)
         ]
     }
 
@@ -26,7 +26,7 @@ public class WebcamDataSource {
         }
     }
     
-    public subscript(index: Int) -> Webcam {
+    public subscript(index: Int) -> SkiResort {
         return self.allObjects[index]
     }
 }

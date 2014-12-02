@@ -11,42 +11,34 @@ import Foundation
 import XebiaSkiFramework
 
 class InterfaceController: WKInterfaceController {
+    @IBOutlet weak var labelTemperature: WKInterfaceLabel!
+    @IBOutlet weak var labelDay: WKInterfaceLabel!
+    @IBOutlet weak var labelResortName: WKInterfaceLabel!
 
     private var dataSource = WebcamDataSource()
     @IBOutlet weak var mainTable: WKInterfaceTable!
     
     override init(context: AnyObject?) {
-        // Initialize variables here.
         super.init(context: context)
         
-        // Configure interface objects here.
-        NSLog("%@ init", self)
-        
         reloadTableData()
+        self.labelTemperature.setText(42.description + "°C")
     }
     
     func reloadTableData() {
         mainTable.setNumberOfRows(self.dataSource.count, withRowType: "CameraTableRow")
         for var index = 0; index < self.dataSource.count; ++index {
             let row = mainTable.rowControllerAtIndex(index) as CameraTableRowController
-            row.configureWithWebcam(self.dataSource[index])
+            row.configureWithSkiResort(self.dataSource[index])
         }
     }
 
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        NSLog("%@ will activate", self)
     }
 
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        NSLog("%@ did deactivate", self)
         super.didDeactivate()
-    }
-
-    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
-        //pushControllerWithName("DetailController", context: nil)
     }
     
     override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {

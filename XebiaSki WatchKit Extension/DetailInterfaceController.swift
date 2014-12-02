@@ -11,21 +11,23 @@ import XebiaSkiFramework
 
 class DetailInterfaceController: WKInterfaceController {
     @IBOutlet weak var nameLabel: WKInterfaceLabel!
+    @IBOutlet weak var temperatureLabel: WKInterfaceLabel!
     @IBOutlet weak var photoImageView: WKInterfaceImage!
+    @IBOutlet weak var dateLabel: WKInterfaceDate!
     
     private let photoDownloadManager: PhotoDownloadManager?
-    var webcam: Webcam?
+    var skiResort: SkiResort?
     
     override init(context: AnyObject?) {
-        if let webcam = context as? Webcam {
-            self.webcam = webcam
-            self.photoDownloadManager = PhotoDownloadManager(photoURL: webcam.URL)
+        if let skiResort = context as? SkiResort {
+            self.skiResort = skiResort
+            self.photoDownloadManager = PhotoDownloadManager(photoURL: skiResort.photoURL)
         }
         super.init(context: context)
     }
     
     override func willActivate() {
-        self.nameLabel.setText(self.webcam?.name)
+        self.nameLabel.setText(self.skiResort?.name)
         self.photoDownloadManager?.retrievePhoto({ (image) -> () in
             self.photoImageView.setImage(image)
         })

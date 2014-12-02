@@ -12,7 +12,7 @@ import XebiaSkiFramework
 class CameraTableRowController: NSObject {
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
     
-    func configureWithWebcam(webcam: Webcam) {
+    func configureWithSkiResort(webcam: SkiResort) {
         self.titleLabel.setText(webcam.name)
     }
 }

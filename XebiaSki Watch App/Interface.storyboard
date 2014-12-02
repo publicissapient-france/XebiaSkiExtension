@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WPz-rI-B5I">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <!--Resort-->
+        <scene sceneID="Lqe-ld-aol">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="XebiaSki_Watch_App" customModuleProvider="target">
+                <controller title="Resort" id="WPz-rI-B5I">
                     <items>
                         <table alignment="left" layout="vertical" id="mTr-za-VCB">
                             <items>
@@ -17,72 +17,68 @@
                                         <items>
                                             <label height="1" alignment="left" text="Label" id="2R9-59-cQ3"/>
                                         </items>
+                                        <connections>
+                                            <segue destination="k3l-Vu-hMh" kind="push" identifier="ShowDetail" id="N43-IN-fi9"/>
+                                        </connections>
                                     </group>
                                     <connections>
                                         <outlet property="titleLabel" destination="2R9-59-cQ3" id="zEx-Ij-gDL"/>
-                                        <segue destination="8LL-ut-pvL" kind="push" identifier="ShowDetail" id="dC0-d6-ThA"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
-                    <connections>
-                        <outlet property="mainTable" destination="mTr-za-VCB" id="FPd-gU-Vqn"/>
-                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="235" y="398"/>
         </scene>
-        <!--DetailController-->
-        <scene sceneID="Uxu-M5-ddI">
+        <!--Detail Interface Controller-->
+        <scene sceneID="a5l-5j-5jT">
             <objects>
-                <controller identifier="DetailController" id="8LL-ut-pvL" customClass="DetailInterfaceController" customModule="XebiaSki_WatchKit_Extension">
+                <controller id="k3l-Vu-hMh" customClass="DetailInterfaceController" customModule="XebiaSki_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" hasDetent="YES" id="wZk-M3-EVW">
                             <items>
-                                <group width="1" height="0.20000000000000001" alignment="left" id="2RH-9h-qLR">
+                                <imageView width="1" height="0.75" alignment="left" contentMode="scaleAspectFill" id="gol-3A-zYv"/>
+                                <group width="1" height="0.25" alignment="left" verticalAlignment="bottom" radius="0.0" hasDetent="YES" id="ftc-8m-RNy">
                                     <items>
-                                        <label height="1" alignment="left" text="Label" id="X1x-FQ-K0S"/>
-                                    </items>
-                                </group>
-                                <group width="1" height="0.80000000000000004" alignment="left" radius="6" id="LgN-gK-xzl">
-                                    <items>
-                                        <imageView width="1" height="1" alignment="left" contentMode="scaleAspectFill" id="gol-3A-zYv"/>
+                                        <label height="1" alignment="left" verticalAlignment="bottom" text="16°C" id="UqL-rD-a1F">
+                                            <fontDescription key="font" type="boldSystem" pointSize="33"/>
+                                        </label>
+                                        <group height="1" alignment="right" verticalAlignment="bottom" layout="vertical" spacing="0.0" id="XO9-18-qGU">
+                                            <items>
+                                                <label alignment="center" text="New-York" id="hWD-V7-jpu"/>
+                                                <dateLabel width="1" alignment="left" textAlignment="center" format="cccc dd" id="BL7-Ii-upe">
+                                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                </dateLabel>
+                                            </items>
+                                        </group>
                                     </items>
                                 </group>
                             </items>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="nameLabel" destination="X1x-FQ-K0S" id="QUN-Oh-61b"/>
-                        <outlet property="photoImageView" destination="gol-3A-zYv" id="Awh-JY-Pwf"/>
+                        <outlet property="dateLabel" destination="BL7-Ii-upe" id="42o-Lj-dzD"/>
+                        <outlet property="nameLabel" destination="hWD-V7-jpu" id="ZbK-Bo-5Mb"/>
+                        <outlet property="photoImageView" destination="gol-3A-zYv" id="z21-xF-k5f"/>
+                        <outlet property="temperatureLabel" destination="UqL-rD-a1F" id="4Yy-ec-jRZ"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="465" y="347"/>
+            <point key="canvasLocation" x="411" y="399"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="XebiaSki_Watch_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y">
-                            <items>
-                                <label alignment="center" verticalAlignment="center" text="Label" id="XZH-k6-soR">
-                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                </label>
-                            </items>
-                        </group>
-                        <group alignment="left" animationDuration="1" id="uCw-4Q-Ouw">
-                            <items>
-                                <imageView width="1" height="1" alignment="center" contentMode="scaleAspectFill" id="FmR-ku-nDy"/>
-                            </items>
-                        </group>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" animationDuration="1" id="uCw-4Q-Ouw"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                     <connections>
-                        <outlet property="photoImage" destination="FmR-ku-nDy" id="niW-Td-DiU"/>
-                        <outlet property="titleLabel" destination="XZH-k6-soR" id="rlc-rG-1NG"/>
+                        <outlet property="group" destination="uCw-4Q-Ouw" id="hjZ-wh-kWK"/>
                     </connections>
                 </glanceController>
             </objects>

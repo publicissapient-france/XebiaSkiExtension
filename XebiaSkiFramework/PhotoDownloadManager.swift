@@ -14,13 +14,6 @@ public typealias DownloadCallback = (NSURL?) -> ()
 public class PhotoDownloadManager {
 
     private var photoURL: NSURL
-    private let lastSavedKey = "LastSaved"
-    private var userDefaults: NSUserDefaults? {
-        get {
-            return NSUserDefaults.standardUserDefaults()
-        }
-    }
-    private let refreshInterval: NSTimeInterval = 60 * 15
     
     public init(photoURL: NSURL) {
         self.photoURL = photoURL
