@@ -14,29 +14,61 @@ class GlanceController: WKInterfaceController {
 
     @IBOutlet weak var group: WKInterfaceGroup!
     @IBOutlet weak var temperatureLabel: WKInterfaceLabel!
-    @IBOutlet weak var photoImage: WKInterfaceImage!
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
-    private let photoDownloadManager = PhotoDownloadManager(photoURL: NSURL(string: "http://www.trinum.com/ibox/ftpcam/mega_les-arcs_arcabulle.jpg")!)
+    @IBOutlet weak var dateLabel: WKInterfaceDate!
+    
+    private var photoDownloadManager: PhotoDownloadManager?
+    
+    var selectedSkiResort: SkiResort? {
+        get {
+            if let data = NSUserDefaults.standardUserDefaults().valueForKey("selection")? as? NSData {
+                return NSKeyedUnarchiver.unarchiveObjectWithData(data) as? SkiResort
+            }
+            return nil
+        }
+    }
     
     override init(context: AnyObject?) {
         super.init(context: context)
     }
 
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        let img = UIImage(named: "les_arcs")
+        if let skiResort = self.selectedSkiResort? {
+            self.photoDownloadManager = PhotoDownloadManager(photoURL: skiResort.photoURL)
+            self.photoDownloadManager?.retrievePhoto({ [weak self] (image) -> () in
+                if let weakSelf = self? {
+                    weakSelf.setBackgroundImage(image as UIImage?)
+                }
+            })
+            self.titleLabel.setText(skiResort.name)
+            self.temperatureLabel.setText(String(skiResort.temperature) + "°C")
+        } else {
+            setBackgroundImage(nil)
+            self.titleLabel.setText("")
+            self.temperatureLabel.setText("")
+            self.dateLabel.setHidden(true)
+        }
+
+    }
+    
+    func setBackgroundImage(image: UIImage?) {
+        if image == nil {
+            self.group.setBackgroundImage(blurImage(UIImage(named: "les_arcs")!))
+        } else {
+            self.group.setBackgroundImage(blurImage(image!))
+        }
+    }
+    
+    func blurImage(image: UIImage) -> UIImage? {
         let filter = CIFilter(name:"CIGaussianBlur")
-        
-        filter.setValue(CIImage(image: img), forKey: kCIInputImageKey)
+        filter.setValue(CIImage(image: image), forKey: kCIInputImageKey)
         
         let outputImg = filter.outputImage
         var context = CIContext(options:nil)
-        let cgimg = context.createCGImage(outputImg, fromRect: CGRectMake(0, 0, 800, 600))
-        
-        self.group.setBackgroundImage(UIImage(CGImage: cgimg))
-
+        let cgimg = context.createCGImage(outputImg, fromRect: CGRectMake(0, 0, 800, 400))
+        return UIImage(CGImage: cgimg)
     }
 
     override func didDeactivate() {

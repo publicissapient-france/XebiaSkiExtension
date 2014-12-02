@@ -37,7 +37,8 @@ class DetailInterfaceController: WKInterfaceController {
     
     func savePreference() {
         if let skiResort = self.skiResort? {
-            NSUserDefaults.standardUserDefaults().setObject(skiResort, forKey: "Selection")
+            let archivedResort = NSKeyedArchiver.archivedDataWithRootObject(skiResort)
+            NSUserDefaults.standardUserDefaults().setObject(archivedResort, forKey: "selection")
             NSUserDefaults.standardUserDefaults().synchronize()
         }
     }

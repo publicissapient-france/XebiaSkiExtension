@@ -18,14 +18,14 @@ public class SkiResort: NSObject, NSCoding {
     }
     
     public required init(coder aDecoder: NSCoder) {
-        self.name = aDecoder.valueForKey("name") as String
-        self.photoURL = NSURL(string: aDecoder.valueForKey("photoURL") as String)!
-        self.temperature = aDecoder.valueForKey("temperature") as Int
+        self.name = aDecoder.decodeObjectForKey("name") as String
+        self.photoURL = NSURL(string: aDecoder.decodeObjectForKey("photoURL") as String)!
+        self.temperature = aDecoder.decodeObjectForKey("temperature") as Int
     }
     
     public func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.setValue(self.name, forKey: "name")
-        aCoder.setValue(self.photoURL.absoluteString, forKey: "photoURL")
-        aCoder.setValue(self.temperature, forKey: "temperature")
+        aCoder.encodeObject(self.name, forKey: "name")
+        aCoder.encodeObject(self.photoURL.absoluteString, forKey: "photoURL")
+        aCoder.encodeObject(self.temperature, forKey: "temperature")
     }
 }
