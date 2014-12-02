@@ -43,7 +43,7 @@ class GlanceController: WKInterfaceController {
                 }
             })
             self.titleLabel.setText(skiResort.name)
-            self.temperatureLabel.setText(String(skiResort.temperature) + "°C")
+            self.temperatureLabel.setText(String(skiResort.temperature) + "°C ")
         } else {
             setBackgroundImage(nil)
             self.titleLabel.setText("")
@@ -67,7 +67,7 @@ class GlanceController: WKInterfaceController {
         
         let outputImg = filter.outputImage
         var context = CIContext(options:nil)
-        let cgimg = context.createCGImage(outputImg, fromRect: CGRectMake(0, 0, 800, 400))
+        let cgimg = context.createCGImage(outputImg, fromRect: CGRectMake(0, 0, min(image.size.width, 600), min(image.size.height, 600)))
         return UIImage(CGImage: cgimg)
     }
 

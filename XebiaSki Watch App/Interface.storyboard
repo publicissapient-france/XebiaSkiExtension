@@ -48,7 +48,7 @@
                                         <label height="1" alignment="left" verticalAlignment="bottom" text="16°C" id="UqL-rD-a1F">
                                             <fontDescription key="font" type="boldSystem" pointSize="33"/>
                                         </label>
-                                        <group height="37" alignment="right" verticalAlignment="bottom" layout="vertical" spacing="0.0" id="XO9-18-qGU">
+                                        <group height="37" alignment="left" verticalAlignment="bottom" layout="vertical" spacing="0.0" id="XO9-18-qGU">
                                             <items>
                                                 <label alignment="left" text="New-York" textAlignment="left" id="hWD-V7-jpu"/>
                                                 <dateLabel alignment="left" textAlignment="left" format="cccc dd" id="BL7-Ii-upe">
@@ -60,6 +60,11 @@
                                 </group>
                             </items>
                         </group>
+                        <button width="1" alignment="left" title="Set as default" id="4Ci-ze-Eu4">
+                            <connections>
+                                <action selector="setAsDefault" destination="k3l-Vu-hMh" id="6q4-bO-PF2"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="dateLabel" destination="BL7-Ii-upe" id="42o-Lj-dzD"/>
@@ -79,7 +84,7 @@
                         <group alignment="left" id="t8f-Gd-c4y">
                             <items>
                                 <dateLabel width="1" height="1" alignment="left" textAlignment="center" lineHeight="1" id="76p-Wd-1uw">
-                                    <fontDescription key="font" type="boldSystem" pointSize="24"/>
+                                    <fontDescription key="font" type="system" pointSize="32"/>
                                     <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
                                 </dateLabel>
                             </items>
@@ -91,10 +96,10 @@
                                         <label height="35" alignment="left" verticalAlignment="bottom" text="16°C" id="UnL-CK-rRe">
                                             <fontDescription key="font" type="boldSystem" pointSize="33"/>
                                         </label>
-                                        <group height="1" alignment="right" verticalAlignment="bottom" layout="vertical" spacing="0.0" id="22Z-TA-8Z4">
+                                        <group height="1" alignment="left" verticalAlignment="bottom" layout="vertical" spacing="0.0" id="22Z-TA-8Z4">
                                             <items>
-                                                <label alignment="right" text="New-York" id="lfi-Wl-Tcn"/>
-                                                <dateLabel width="1" alignment="right" textAlignment="center" minimumScaleFactor="0.30000000000000016" format="cccc dd" id="t8z-rt-nhB">
+                                                <label alignment="left" text="New-York" textAlignment="left" id="lfi-Wl-Tcn"/>
+                                                <dateLabel alignment="left" textAlignment="left" minimumScaleFactor="0.30000000000000016" format="cccc dd" id="t8z-rt-nhB">
                                                     <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                                 </dateLabel>
                                             </items>
