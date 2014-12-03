@@ -33,6 +33,7 @@ class DetailInterfaceController: WKInterfaceController {
             self.photoDownloadManager?.retrievePhoto({ (image) -> () in
                 self.photoImageView.setImage(image)
             })
+            setTitle(skiResort.name)
         }
     }
     
