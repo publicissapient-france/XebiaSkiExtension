@@ -18,18 +18,19 @@ class DetailInterfaceController: WKInterfaceController {
     private let photoDownloadManager: PhotoDownloadManager?
     var skiResort: SkiResort?
     
-    override init(context: AnyObject?) {
+    override func awakeWithContext(context: AnyObject!) {
+        super.awakeWithContext(context)
+
         if let skiResort = context as? SkiResort {
             self.skiResort = skiResort
-            self.photoDownloadManager = PhotoDownloadManager(photoURL: skiResort.photoURL)
+
+            self.nameLabel.setText(skiResort.name)
+            self.temperatureLabel.setText(String(skiResort.temperature) + "°C ")
         }
-        super.init(context: context)
     }
     
     override func willActivate() {
         if let skiResort = self.skiResort? {
-            self.nameLabel.setText(skiResort.name)
-            self.temperatureLabel.setText(String(skiResort.temperature) + "°C ")
             self.photoDownloadManager?.retrievePhoto({ (image) -> () in
                 self.photoImageView.setImage(image)
             })

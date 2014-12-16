@@ -11,12 +11,12 @@ import Foundation
 import XebiaSkiFramework
 
 class MasterInterfaceController: WKInterfaceController {
+    @IBOutlet weak var mainTable: WKInterfaceTable!
 
     private var dataSource = WebcamDataSource()
-    @IBOutlet weak var mainTable: WKInterfaceTable!
-    
-    override init(context: AnyObject?) {
-        super.init(context: context)
+
+    override init() {
+        super.init()
         
         reloadTableData()
     }

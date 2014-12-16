@@ -27,10 +27,6 @@ class GlanceController: WKInterfaceController {
             return nil
         }
     }
-    
-    override init(context: AnyObject?) {
-        super.init(context: context)
-    }
 
     override func willActivate() {
         super.willActivate()
