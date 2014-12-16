@@ -18,16 +18,11 @@
 		42790C631A120ED900A837EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42790C621A120ED900A837EE /* Images.xcassets */; };
 		42790C661A120ED900A837EE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42790C641A120ED900A837EE /* LaunchScreen.xib */; };
 		42790C721A120ED900A837EE /* XebiaSkiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42790C711A120ED900A837EE /* XebiaSkiTests.swift */; };
-		42790C861A1243F300A837EE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42790C851A1243F300A837EE /* NotificationCenter.framework */; };
-		42790C8B1A1243F300A837EE /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42790C8A1A1243F300A837EE /* TodayViewController.swift */; };
-		42790C8D1A1243F300A837EE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42790C8C1A1243F300A837EE /* MainInterface.storyboard */; };
-		42790C901A1243F300A837EE /* TodayPreviewExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42790C831A1243F300A837EE /* TodayPreviewExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		42790C9F1A12463A00A837EE /* XebiaSkiFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 42790C9E1A12463A00A837EE /* XebiaSkiFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42790CA51A12463A00A837EE /* XebiaSkiFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42790C9A1A12463A00A837EE /* XebiaSkiFramework.framework */; };
 		42790CAE1A12463A00A837EE /* XebiaSkiFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42790CAD1A12463A00A837EE /* XebiaSkiFrameworkTests.swift */; };
 		42790CB11A12463A00A837EE /* XebiaSkiFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42790C9A1A12463A00A837EE /* XebiaSkiFramework.framework */; };
 		42790CB21A12463A00A837EE /* XebiaSkiFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42790C9A1A12463A00A837EE /* XebiaSkiFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		42790CBC1A12465E00A837EE /* XebiaSkiFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42790C9A1A12463A00A837EE /* XebiaSkiFramework.framework */; };
 		42790CBF1A1246C700A837EE /* PhotoDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42790CBD1A1246C700A837EE /* PhotoDownloadManager.swift */; };
 		42C7D9C11A1C2A6000EFA517 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C7D9C01A1C2A6000EFA517 /* WatchKit.framework */; };
 		42C7D9C71A1C2A6000EFA517 /* MasterInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7D9C61A1C2A6000EFA517 /* MasterInterfaceController.swift */; };
@@ -47,13 +42,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 42790C551A120ED900A837EE;
 			remoteInfo = XebiaSki;
-		};
-		42790C8E1A1243F300A837EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42790C4E1A120ED800A837EE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 42790C821A1243F300A837EE;
-			remoteInfo = TodayPreviewExtension;
 		};
 		42790CA61A12463A00A837EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -99,7 +87,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				42790C901A1243F300A837EE /* TodayPreviewExtension.appex in Embed App Extensions */,
 				42C7D9DD1A1C2A6000EFA517 /* XebiaSki WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -133,11 +120,7 @@
 		42790C6B1A120ED900A837EE /* XebiaSkiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XebiaSkiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42790C701A120ED900A837EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42790C711A120ED900A837EE /* XebiaSkiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XebiaSkiTests.swift; sourceTree = "<group>"; };
-		42790C831A1243F300A837EE /* TodayPreviewExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayPreviewExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		42790C851A1243F300A837EE /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		42790C891A1243F300A837EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		42790C8A1A1243F300A837EE /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		42790C8C1A1243F300A837EE /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		42790C9A1A12463A00A837EE /* XebiaSkiFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XebiaSkiFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42790C9D1A12463A00A837EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42790C9E1A12463A00A837EE /* XebiaSkiFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XebiaSkiFramework.h; sourceTree = "<group>"; };
@@ -172,15 +155,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		42790C801A1243F300A837EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42790CBC1A12465E00A837EE /* XebiaSkiFramework.framework in Frameworks */,
-				42790C861A1243F300A837EE /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +214,6 @@
 			children = (
 				42790C581A120ED900A837EE /* XebiaSki */,
 				42790C6E1A120ED900A837EE /* XebiaSkiTests */,
-				42790C871A1243F300A837EE /* TodayPreviewExtension */,
 				42790C9B1A12463A00A837EE /* XebiaSkiFramework */,
 				42790CAA1A12463A00A837EE /* XebiaSkiFrameworkTests */,
 				42C7D9C21A1C2A6000EFA517 /* XebiaSki WatchKit Extension */,
@@ -255,7 +228,6 @@
 			children = (
 				42790C561A120ED900A837EE /* XebiaSki.app */,
 				42790C6B1A120ED900A837EE /* XebiaSkiTests.xctest */,
-				42790C831A1243F300A837EE /* TodayPreviewExtension.appex */,
 				42790C9A1A12463A00A837EE /* XebiaSkiFramework.framework */,
 				42790CA41A12463A00A837EE /* XebiaSkiFrameworkTests.xctest */,
 				42C7D9BF1A1C2A6000EFA517 /* XebiaSki WatchKit Extension.appex */,
@@ -309,24 +281,6 @@
 				42C7D9C01A1C2A6000EFA517 /* WatchKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		42790C871A1243F300A837EE /* TodayPreviewExtension */ = {
-			isa = PBXGroup;
-			children = (
-				42790C8A1A1243F300A837EE /* TodayViewController.swift */,
-				42790C8C1A1243F300A837EE /* MainInterface.storyboard */,
-				42790C881A1243F300A837EE /* Supporting Files */,
-			);
-			path = TodayPreviewExtension;
-			sourceTree = "<group>";
-		};
-		42790C881A1243F300A837EE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				42790C891A1243F300A837EE /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		42790C9B1A12463A00A837EE /* XebiaSkiFramework */ = {
@@ -434,7 +388,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				42790C8F1A1243F300A837EE /* PBXTargetDependency */,
 				42790CB01A12463A00A837EE /* PBXTargetDependency */,
 				42C7D9DC1A1C2A6000EFA517 /* PBXTargetDependency */,
 			);
@@ -460,23 +413,6 @@
 			productName = XebiaSkiTests;
 			productReference = 42790C6B1A120ED900A837EE /* XebiaSkiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		42790C821A1243F300A837EE /* TodayPreviewExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 42790C911A1243F300A837EE /* Build configuration list for PBXNativeTarget "TodayPreviewExtension" */;
-			buildPhases = (
-				42790C7F1A1243F300A837EE /* Sources */,
-				42790C801A1243F300A837EE /* Frameworks */,
-				42790C811A1243F300A837EE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TodayPreviewExtension;
-			productName = TodayPreviewExtension;
-			productReference = 42790C831A1243F300A837EE /* TodayPreviewExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 		42790C991A12463A00A837EE /* XebiaSkiFramework */ = {
 			isa = PBXNativeTarget;
@@ -573,15 +509,6 @@
 						CreatedOnToolsVersion = 6.1;
 						TestTargetID = 42790C551A120ED900A837EE;
 					};
-					42790C821A1243F300A837EE = {
-						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 8H9F4GW3CK;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
 					42790C991A12463A00A837EE = {
 						CreatedOnToolsVersion = 6.1;
 					};
@@ -618,7 +545,6 @@
 			targets = (
 				42790C551A120ED900A837EE /* XebiaSki */,
 				42790C6A1A120ED900A837EE /* XebiaSkiTests */,
-				42790C821A1243F300A837EE /* TodayPreviewExtension */,
 				42790C991A12463A00A837EE /* XebiaSkiFramework */,
 				42790CA31A12463A00A837EE /* XebiaSkiFrameworkTests */,
 				42C7D9BE1A1C2A6000EFA517 /* XebiaSki WatchKit Extension */,
@@ -642,14 +568,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		42790C811A1243F300A837EE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42790C8D1A1243F300A837EE /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,14 +623,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		42790C7F1A1243F300A837EE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42790C8B1A1243F300A837EE /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		42790C951A12463A00A837EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -750,11 +660,6 @@
 			isa = PBXTargetDependency;
 			target = 42790C551A120ED900A837EE /* XebiaSki */;
 			targetProxy = 42790C6C1A120ED900A837EE /* PBXContainerItemProxy */;
-		};
-		42790C8F1A1243F300A837EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 42790C821A1243F300A837EE /* TodayPreviewExtension */;
-			targetProxy = 42790C8E1A1243F300A837EE /* PBXContainerItemProxy */;
 		};
 		42790CA71A12463A00A837EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -944,36 +849,6 @@
 			};
 			name = Release;
 		};
-		42790C921A1243F300A837EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TodayPreviewExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		42790C931A1243F300A837EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = TodayPreviewExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		42790CB41A12463B00A837EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1140,15 +1015,6 @@
 			buildConfigurations = (
 				42790C791A120ED900A837EE /* Debug */,
 				42790C7A1A120ED900A837EE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		42790C911A1243F300A837EE /* Build configuration list for PBXNativeTarget "TodayPreviewExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				42790C921A1243F300A837EE /* Debug */,
-				42790C931A1243F300A837EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
