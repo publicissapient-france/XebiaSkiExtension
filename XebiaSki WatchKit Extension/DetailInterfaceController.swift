@@ -15,8 +15,8 @@ class DetailInterfaceController: WKInterfaceController {
     @IBOutlet weak var photoImageView: WKInterfaceImage!
     @IBOutlet weak var dateLabel: WKInterfaceDate!
     
-    private let photoDownloadManager: PhotoDownloadManager?
-    var skiResort: SkiResort?
+    private var photoDownloadManager: PhotoDownloadManager?
+    private var skiResort: SkiResort?
     
     override func awakeWithContext(context: AnyObject!) {
         super.awakeWithContext(context)
@@ -26,6 +26,7 @@ class DetailInterfaceController: WKInterfaceController {
 
             self.nameLabel.setText(skiResort.name)
             self.temperatureLabel.setText(String(skiResort.temperature) + "°C ")
+            self.photoDownloadManager = PhotoDownloadManager(photoURL: skiResort.photoURL)
         }
     }
     
