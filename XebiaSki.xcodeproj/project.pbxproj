@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		423058681A28C4B600DFB729 /* CameraTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423058671A28C4B600DFB729 /* CameraTableRowController.swift */; };
+		423058681A28C4B600DFB729 /* SkiResortTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423058671A28C4B600DFB729 /* SkiResortTableRowController.swift */; };
 		4230586B1A2DC10E00DFB729 /* SkiResort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4230586A1A2DC10E00DFB729 /* SkiResort.swift */; };
-		4230586E1A2DC1B100DFB729 /* WebcamDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4230586D1A2DC1B100DFB729 /* WebcamDataSource.swift */; };
+		4230586E1A2DC1B100DFB729 /* SkiResortDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4230586D1A2DC1B100DFB729 /* SkiResortDataSource.swift */; };
 		4230586F1A2DC3F500DFB729 /* XebiaSkiFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42790C9A1A12463A00A837EE /* XebiaSkiFramework.framework */; };
 		423058711A2DCECC00DFB729 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423058701A2DCECC00DFB729 /* DetailInterfaceController.swift */; };
 		42790C5C1A120ED900A837EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42790C5B1A120ED900A837EE /* AppDelegate.swift */; };
@@ -106,9 +106,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		423058671A28C4B600DFB729 /* CameraTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTableRowController.swift; sourceTree = "<group>"; };
+		423058671A28C4B600DFB729 /* SkiResortTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkiResortTableRowController.swift; sourceTree = "<group>"; };
 		4230586A1A2DC10E00DFB729 /* SkiResort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkiResort.swift; sourceTree = "<group>"; };
-		4230586D1A2DC1B100DFB729 /* WebcamDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebcamDataSource.swift; sourceTree = "<group>"; };
+		4230586D1A2DC1B100DFB729 /* SkiResortDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkiResortDataSource.swift; sourceTree = "<group>"; };
 		423058701A2DCECC00DFB729 /* DetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
 		42790C561A120ED900A837EE /* XebiaSki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XebiaSki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42790C5A1A120ED900A837EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 		423058661A28C4B600DFB729 /* TableRowControllers */ = {
 			isa = PBXGroup;
 			children = (
-				423058671A28C4B600DFB729 /* CameraTableRowController.swift */,
+				423058671A28C4B600DFB729 /* SkiResortTableRowController.swift */,
 			);
 			path = TableRowControllers;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 		4230586C1A2DC19D00DFB729 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				4230586D1A2DC1B100DFB729 /* WebcamDataSource.swift */,
+				4230586D1A2DC1B100DFB729 /* SkiResortDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -628,7 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4230586B1A2DC10E00DFB729 /* SkiResort.swift in Sources */,
-				4230586E1A2DC1B100DFB729 /* WebcamDataSource.swift in Sources */,
+				4230586E1A2DC1B100DFB729 /* SkiResortDataSource.swift in Sources */,
 				42790CBF1A1246C700A837EE /* PhotoDownloadManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,7 +647,7 @@
 			files = (
 				42C7D9C91A1C2A6000EFA517 /* NotificationController.swift in Sources */,
 				42C7D9C71A1C2A6000EFA517 /* MasterInterfaceController.swift in Sources */,
-				423058681A28C4B600DFB729 /* CameraTableRowController.swift in Sources */,
+				423058681A28C4B600DFB729 /* SkiResortTableRowController.swift in Sources */,
 				42C7D9CB1A1C2A6000EFA517 /* GlanceController.swift in Sources */,
 				423058711A2DCECC00DFB729 /* DetailInterfaceController.swift in Sources */,
 			);

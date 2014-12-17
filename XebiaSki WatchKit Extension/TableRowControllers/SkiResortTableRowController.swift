@@ -1,5 +1,5 @@
 //
-//  CameraTableRowController.swift
+//  SkiResortTableRowController.swift
 //  XebiaSki
 //
 //  Created by Simone Civetta on 28/11/14.
@@ -9,7 +9,7 @@
 import WatchKit
 import XebiaSkiFramework
 
-class CameraTableRowController: NSObject {
+class SkiResortTableRowController: NSObject {
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
     
     func configureWithSkiResort(webcam: SkiResort) {

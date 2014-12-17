@@ -13,7 +13,7 @@ import XebiaSkiFramework
 class MasterInterfaceController: WKInterfaceController {
     @IBOutlet weak var mainTable: WKInterfaceTable!
 
-    private var dataSource = WebcamDataSource()
+    private var dataSource = SkiResortDataSource()
 
     override init() {
         super.init()
@@ -22,9 +22,9 @@ class MasterInterfaceController: WKInterfaceController {
     }
     
     func reloadTableData() {
-        mainTable.setNumberOfRows(self.dataSource.count, withRowType: "CameraTableRow")
+        mainTable.setNumberOfRows(self.dataSource.count, withRowType: "SkiResortTableRow")
         for var index = 0; index < self.dataSource.count; ++index {
-            let row = mainTable.rowControllerAtIndex(index) as CameraTableRowController
+            let row = mainTable.rowControllerAtIndex(index) as SkiResortTableRowController
             row.configureWithSkiResort(self.dataSource[index])
         }
     }

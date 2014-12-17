@@ -1,5 +1,5 @@
 //
-//  WebcamDataSource.swift
+//  SkiResortDataSource.swift
 //  XebiaSki
 //
 //  Created by Simone Civetta on 02/12/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class WebcamDataSource {
+public class SkiResortDataSource {
     var allObjects: Array<SkiResort>
     
     public init() {

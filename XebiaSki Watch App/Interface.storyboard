@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WPz-rI-B5I">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="13F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WPz-rI-B5I">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
     </dependencies>
     <scenes>
         <!--Resort-->
@@ -12,7 +12,7 @@
                     <items>
                         <table alignment="left" layout="vertical" id="mTr-za-VCB">
                             <items>
-                                <tableRow identifier="CameraTableRow" id="T6W-aX-MIg" customClass="CameraTableRowController" customModule="XebiaSki_WatchKit_Extension">
+                                <tableRow identifier="SkiResortTableRow" id="T6W-aX-MIg" customClass="SkiResortTableRowController" customModule="XebiaSki_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="44" alignment="left" id="khI-OW-wJ5">
                                         <items>
                                             <label height="1" alignment="left" text="Label" id="2R9-59-cQ3"/>
