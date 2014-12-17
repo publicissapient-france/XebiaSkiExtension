@@ -12,7 +12,7 @@ import XebiaSkiFramework
 class SkiResortTableRowController: NSObject {
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
     
-    func configureWithSkiResort(webcam: SkiResort) {
-        self.titleLabel.setText(webcam.name)
+    func configureWithSkiResort(skiResort: SkiResort) {
+        self.titleLabel.setText(skiResort.name)
     }
 }
