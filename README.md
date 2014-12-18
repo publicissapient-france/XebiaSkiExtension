@@ -3,8 +3,8 @@ XebiaSkiExtension
 
 Demo project, written in Swift, to explore the usage of iOS extensions for Today Widgets and WatchKit.
 
-![Main Scene](readme-resources/main-scene.png =149x200)
-![Detail Scene](readme-resources/detail-scene.png =149x200)
+<img alt="Main Scene" src="https://raw.githubusercontent.com/xebia-france/XebiaSkiExtension/master/readme-resources/main-scene.png" width="149" height="200">
+<img alt="Detail Scene" src="https://raw.githubusercontent.com/xebia-france/XebiaSkiExtension/master/readme-resources/detail-scene.png" width="149" height="200">
 
 # How it works
 
